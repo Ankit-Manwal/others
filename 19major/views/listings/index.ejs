@@ -1,0 +1,42 @@
+<% layout("/layouts/boilerplate") -%>
+
+    <body>
+        <h3>All Listings</h3> 
+
+        <!-- <form method="GET" action="/listings/new">      create new data -->
+        <!-- <button>Create New Listing</button> -->
+        <!-- </form> -->
+
+        <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+            <% for(let listing of allListings) { %>
+
+                <a href="/listings/<%= listing._id %>" class="listing_links">
+                    <div class="card col listing-card" style="width: 20rem;">
+
+                     <img
+                       src="<%= listing.image.url %>"
+                       class="card-img-top"
+                       alt="listing image"
+                       style="height: 20rem;"
+                       onerror="this.onerror=null; this.src='https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg';"><div class="card-img-overlay">abcd</div>
+
+                        <div class="card-body">
+                            <h5 class="card-title"><b><%= listing.title %></b></h5>
+                            <p class="card-text">&#8377;
+                                <%= listing.price.toLocaleString("en-IN") %> / night</p>
+                        </div>
+
+                    </div>
+
+                </a>
+
+                <% } %>
+        </div>
+
+        <!-- <ul>
+      <% for(let listing of allListings) { %>    show all data
+      <li><a href="/listings/<%= listing._id %>"> <%= listing.title %> </a></li>
+      <% } %>
+    </ul> -->
+
+    </body>

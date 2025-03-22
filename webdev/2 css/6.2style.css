@@ -1,0 +1,28 @@
+.box{
+    height: 100px;
+    width: 300px;
+    background-color: pink;
+    animation-name: fontanimation;
+    animation-duration: 2s ;
+    animation-delay: 0;
+    animation-iteration-count: 3;
+    animation-direction: normal; 
+}
+
+@keyframes fontanimation {
+    from{
+        font-size: 20px; width: 300px;
+    }
+    to{
+        font-size: 40px;width: 700px;
+    }
+}
+
+/* @keyframes fontanimation {
+    from{
+        width: 300px;
+    }
+    to{
+       width: 700px;
+    }
+} */
